@@ -8,9 +8,14 @@ app.use(cors());
 
 const server = http.createServer(app);
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://video-watchparty.vercel.app/"
+];
+
 const io = new Server(server, {
   cors: {
-    origin: ["https://your-vercel-domain.vercel.app"],
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
   },
 });
