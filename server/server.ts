@@ -10,7 +10,8 @@ const server = http.createServer(app);
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "video-watchparty-epnz6d4b3-sofaspawns-projects.vercel.app"
+  "https://video-watchparty.vercel.app",
+  "https://video-watchparty-epnz6d4b3-sofaspawns-projects.vercel.app"
 ];
 
 const io = new Server(server, {
