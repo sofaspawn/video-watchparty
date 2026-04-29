@@ -78,7 +78,7 @@ export function VideoPlayer() {
   };
 
   const onPlayerStateChange = (event: any) => {
-    const { PLAYING, PAUSED, ENDED } = window.YT.PlayerState;
+    const { PLAYING, PAUSED } = window.YT.PlayerState;
     const isPlaying = event.data === PLAYING;
 
     if (event.data === PLAYING || event.data === PAUSED) {
