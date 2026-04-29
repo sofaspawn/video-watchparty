@@ -1,22 +1,12 @@
-import { useEffect } from "react";
-import { socket } from "./socket";
+import { VideoPlayer } from "./components/VideoPlayer";
+import "./App.css";
 
 function App() {
-  useEffect(() => {
-    socket.on("message", (data) => {
-      console.log("Message:", data);
-    });
-
-    return () => {
-      socket.off("message");
-    };
-  }, []);
-
-  const sendMessage = () => {
-    socket.emit("message", "Hello from client");
-  };
-
-  return <button onClick={sendMessage}>Send</button>;
+  return (
+    <div className="app">
+      <VideoPlayer />
+    </div>
+  );
 }
 
 export default App;
